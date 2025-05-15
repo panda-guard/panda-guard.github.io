@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Panda-Guard</title>
+  <title>PANDAGUARD</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,20 +52,44 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">PANDAGUARD: Systematic Evaluation of LLM Safety in the Era of Jailbreaking Attacks</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://floyedshen.github.io/" target="_blank">Guobin Shen</a><sup>*</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://scholar.google.com/citations?user=2E9Drq8AAAAJ&hl=en" target="_blank">Dongcheng Zhao</a><sup>*</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a> Linghao Feng </a>
+                  </span>
+                  <span class="author-block">
+                    <a> Xiang He </a>
+                  </span>
+                  <span class="author-block">
+                    <a> Jihang Wang </a>
+                  </span>
+                  <span class="author-block">
+                    <a> Sicheng Shen </a>
+                  </span>
+                  <span class="author-block">
+                    <a> Haibo Tong </a>
+                  </span>
+                  <span class="author-block">
+                    <a> Yiting Dong </a>
+                  </span>
+                  <span class="author-block">
+                    <a> Jindong Li </a>
+                  </span>
+                  <span class="author-block">
+                    <a> Xiang Zhen </a>
+                  </span>
+                  <span class="author-block">
+                    <a> Yi Zeng </a>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
+                    <span class="author-block">Institution of Automation, Chinese Academy of Sciences<br>Neuips 2025 Submission</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
 
@@ -73,7 +97,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="static/pdfs/sample.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -84,7 +108,7 @@
 
                     <!-- Supplementary PDF link -->
                     <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      <a href="static/pdfs/sample.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
@@ -95,7 +119,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/Beijing-AISI/panda-guard" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -106,7 +130,7 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="static/pdfs/sample.pdf" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -124,11 +148,10 @@
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
         <source src="static/videos/banner_video.mp4"
         type="video/mp4">
       </video>
@@ -137,7 +160,7 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End teaser video -->
 
 <!-- Paper abstract -->
@@ -148,7 +171,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Large language models (LLMs) have achieved remarkable capabilities but remain vulnerable to adversarial prompts known as jailbreaks, which can bypass safety alignment and elicit harmful outputs. Despite growing efforts in LLM safety research, existing evaluations are often fragmented, focused on isolated attack or defense techniques, and lack systematic, reproducible analysis. In this work, we introduce PandaGuard, a unified and modular framework that models LLM jailbreak safety as a multi-agent system comprising attackers, defenders, and judges. Built on this framework, we develop PandaBench, a large-scale benchmark encompassing over 50 LLMs, 20+ attack methods, 10+ defense mechanisms, and multiple judgment strategies, requiring over 3 billion tokens to execute. Our comprehensive evaluation reveals key insights into model vulnerabilities, defense cost-performance trade-offs, and judge consistency. We find that no single defense is optimal across all dimensions and that judge disagreement introduces nontrivial variance in safety assessments. We release the full code, configurations, and evaluation results to support transparent and reproducible research in LLM safety.
           </p>
         </div>
       </div>
@@ -157,93 +180,110 @@
 </section>
 <!-- End paper abstract -->
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <figure class="image">
+          <img src="static/images/img-white.png" alt="Descriptive Alt Text">
+        </figure>
+        <p class="has-text-centered is-size-6 mt-2">The PandaGuard framework architecture illustrating the end-to-end pipeline for LLM safety evaluation. The system connects three key components: Attackers, Defenders, and Judges. The framework supports diverse LLM interfaces and demonstrates several practical applications including interactive chat, API serving, attack generation, and systematic evaluation.</p>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <figure class="image">
+          <img src="static/images/models.png" alt="Descriptive Alt Text">
+        </figure>
+        <p class="has-text-centered is-size-6 mt-2">Model-wise safety analysis. (a) ASR vs. release date for various LLMs. (b) ASR across different harm categories with and without defense mechanisms. (c) Overall ASR for all evaluated LLMs with and without defense mechanisms.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <figure class="image">
+          <img src="static/images/asr.png" alt="Descriptive Alt Text">
+        </figure>
+        <p class="has-text-centered is-size-6 mt-2">ASR heatmap for different attack methods against various LLMs. Higher values indicate more successful attacks.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <figure class="image">
+          <img src="static/images/attack-defence.png" alt="Descriptive Alt Text">
+        </figure>
+        <p class="has-text-centered is-size-6 mt-2">Attack and defense mechanisms analysis. (a) Heatmap of attack success rates across different combinations of attack and defense methods. (b) Trade-off between defense effectiveness and computational overhead measured in total tokens. (c) Trade-off between defense effectiveness and impact on model performance as measured by Alpaca winrate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <figure class="image">
+          <img src="static/images/pie.png" alt="Descriptive Alt Text">
+        </figure>
+        <p class="has-text-centered is-size-6 mt-2">Safety judge reliability analysis. (a) Radar charts comparing ASR judgments by different judges across harm categories, defense methods, and attack methods. Judges include rule-based and LLM-based (GPT-4o, Qwen2.5, Llama3.3). (b) Cohen's Kappa matrix showing agreement between different judges.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <!-- Paper video. -->
       <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
           <div class="publication-video">
-            <!-- Youtube embed code here -->
             <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End youtube video -->
 
 
 <!-- Video carousel -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Another Carousel</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
           <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
             <source src="static/videos/carousel1.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video2">
           <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
             <source src="static/videos/carousel2.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video3">
           <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
             <source src="static/videos/carousel3.mp4"
             type="video/mp4">
           </video>
@@ -251,7 +291,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End video carousel -->
 
 
@@ -291,8 +331,7 @@
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
 
