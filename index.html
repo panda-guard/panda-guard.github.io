@@ -25,7 +25,7 @@
 
 
   <title>PANDAGUARD</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -106,17 +106,6 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/sample.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
                   <!-- Github link -->
                   <span class="link-block">
                     <a href="https://github.com/Beijing-AISI/panda-guard" target="_blank"
@@ -138,6 +127,28 @@
                   <span>arXiv</span>
                 </a>
               </span>
+
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/Beijing-AISI/panda-bench" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
+                        alt="Hugging Face" style="height: 1em; vertical-align: middle;">
+                  </span>
+                  <span>Huggingface</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+              <a href="https://panda-guard.readthedocs.io/en/latest/" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fas fa-book"></i> <!-- Book icon from Font Awesome -->
+                </span>
+                <span>Tutorial</span>
+              </a>
+            </span>
+
             </div>
           </div>
         </div>
@@ -180,7 +191,7 @@
 </section>
 <!-- End paper abstract -->
 
-<section class="section">
+<!-- <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-five-fifths">
@@ -243,7 +254,146 @@
       </div>
     </div>
   </div>
+</section> -->
+
+
+
+
+
+
+
+
+<!-- Introduction and Motivation -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="content has-text-centered">
+      <h2 class="title is-3">Why PandaGuard Matters</h2>
+      <p class="is-size-5">With the growing capabilities and adoption of large language models (LLMs), the risk of jailbreak attacks—where adversaries manipulate models into bypassing safety guardrails—has become a critical challenge. <strong>PandaGuard</strong> offers the most comprehensive framework for evaluating and enhancing the safety of LLMs across multiple models, attacks, and defenses.</p>
+    </div>
+    <!-- <div class="columns is-centered">
+      <div class="column is-five-fifths has-text-centered">
+        <figure class="image">
+          <img src="static/images/img-white.png" alt="LLM Jailbreak Motivation">
+        </figure>
+        <p class="has-text-centered is-size-6 mt-2">Jailbreak attacks trick LLMs into generating harmful or unauthorized content. A systematic safety evaluation framework is urgently needed.</p>
+      </div>
+    </div> -->
+  </div>
 </section>
+
+<!-- Framework Overview -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="content has-text-centered">
+      <h2 class="title is-3">PandaGuard Framework</h2>
+      <p class="is-size-5">PandaGuard structures LLM safety evaluation as an interactive system with <strong>Attackers</strong>, <strong>Defenders</strong>, and <strong>Judges</strong>. It supports plug-and-play of various algorithms, backends, and interfaces.</p>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-five-fifths has-text-centered">
+        <figure class="image">
+          <img src="static/images/img-white.png" alt="PandaGuard Architecture">
+        </figure>
+        <p class="has-text-centered is-size-6 mt-2">The PandaGuard framework architecture illustrating the end-to-end pipeline for LLM safety evaluation. The system connects three key components: Attackers, Defenders, and Judges. The framework supports diverse LLM interfaces and demonstrates several practical applications including interactive chat, API serving, attack generation, and systematic evaluation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Components -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="content">
+      <h2 class="title is-3 has-text-centered">System Components</h2>
+      <div class="columns is-multiline">
+        <div class="column is-half">
+          <h4 class="title is-4">Attackers</h4>
+          <p class="is-size-5">Includes 18+ prompt-based and instruction-tuning jailbreak attack strategies designed to elicit unauthorized outputs from the LLMs.</p>
+        </div>
+        <div class="column is-half">
+          <h4 class="title is-4">Defenders</h4>
+          <p class="is-size-5">Applies safety-alignment techniques such as reinforcement learning from human feedback (RLHF), paraphrasing, and response filtering.</p>
+        </div>
+        <div class="column is-half">
+          <h4 class="title is-4">Judges</h4>
+          <p class="is-size-5">Comprises rule-based, heuristic, and LLM-based evaluation strategies to assess jailbreak success rates and safety compliance.</p>
+        </div>
+        <div class="column is-half">
+          <h4 class="title is-4">Multi-Backend Support</h4>
+          <p class="is-size-5">Seamlessly integrates with inference engines such as <code>vLLM</code>, <code>SGLang</code>, and <code>Ollama</code> for scalable deployment and testing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experimental Insights -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="content has-text-centered">
+      <h2 class="title is-3">Empirical Results</h2>
+      <p class="is-size-5">PandaBench, the evaluation suite of PandaGuard, covers over <strong>50+ LLMs</strong>, testing across <strong>multiple harm categories</strong> and defense setups, validated with more than <strong>1.5 billion tokens</strong>.</p>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-four-fifths has-text-centered">
+        <figure class="image">
+          <img src="static/images/models.png" alt="aaa">
+        </figure>
+        <p class="has-text-centered is-size-6 mt-2">Model-wise safety analysis. (a) ASR vs. release date for various LLMs. (b) ASR across different harm categories with and without defense mechanisms. (c) Overall ASR for all evaluated LLMs with and without defense mechanisms.</p>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-four-fifths has-text-centered">
+        <figure class="image">
+          <img src="static/images/asr.png" alt="bbb">
+        </figure>
+        <p class="has-text-centered is-size-6 mt-2"> ASR heatmap for different attack methods against various LLMs. Higher values indicate more successful attacks.</p>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-four-fifths has-text-centered">
+        <figure class="image">
+          <img src="static/images/attack-defence.png" alt="ccc">
+        </figure>
+        <p class="has-text-centered is-size-6 mt-2"> Attack and defense mechanisms analysis. (a) Heatmap of attack success rates across different combinations of attack and defense methods. (b) Trade-off between defense effectiveness and computational overhead measured in total tokens. (c) Trade-off between defense effectiveness and impact on model performance as measured by Alpaca winrate.</p>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-four-fifths has-text-centered">
+        <figure class="image">
+          <img src="static/images/pie.png" alt="ddd">
+        </figure>
+        <p class="has-text-centered is-size-6 mt-2"> Safety judge reliability analysis. (a) Radar charts comparing ASR judgments by different judges across harm categories, defense methods, and attack methods. Judges include rule-based and LLM-based (GPT-4o, Qwen2.5, Llama3.3). (b) Cohen's Kappa matrix showing agreement between different judges.</p>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<!-- Conclusion -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="content has-text-centered">
+      <h2 class="title is-3">Conclusion</h2>
+      <p class="is-size-5">PandaGuard represents a leap forward in the systematic safety evaluation of large language models. By integrating diverse components, providing reproducible pipelines, and supporting extensible backends, it offers a valuable toolkit for researchers and practitioners alike to ensure the safe and trustworthy deployment of LLMs.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- Youtube video -->
 <!-- <section class="hero is-small is-light">
